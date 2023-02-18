@@ -1,0 +1,16 @@
+[package]
+name = "KebabRS"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "kebab_lib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "kebab_cli"
+path = "src/bin.rs"
+
+[dependencies]
+clap = { version = "4.1.6", features = ["derive"] }
+sqlx = { version = "0.6.2", features = ["runtime-async-std-native-tls", "sqlite"] }
