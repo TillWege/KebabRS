@@ -1,5 +1,9 @@
-use kebab_lib::test;
+use async_std::task;
 
-fn main() {
-    test();
+use kebab_lib::get_db;
+
+fn main()  {
+    task::block_on(async {
+        let db = get_db().await;
+    });
 }
